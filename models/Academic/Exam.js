@@ -41,12 +41,10 @@ const examSchema = new Schema(
     },
     duration: {
       type: String,
-      required: true,
       default: "30 minutes",
     },
     examDate: {
       type: Date,
-      required: true,
       default: new Date(),
     },
     examTime: {
@@ -55,7 +53,6 @@ const examSchema = new Schema(
     },
     examType: {
       type: String,
-      required: true,
       default: "Quiz",
     },
     examStatus: {
