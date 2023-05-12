@@ -159,7 +159,6 @@ exports.studentUpdateProfile = AsyncHandler(async (req, res) => {
 //@desc Admin updated Student e: assign class
 //@route PUT /api/v1/students/:studentID/update/admin
 //@access Private Admin only
-
 exports.adminUpdateStudent = AsyncHandler(async (req, res) => {
     const { 
         classLevels, 
@@ -205,4 +204,12 @@ exports.adminUpdateStudent = AsyncHandler(async (req, res) => {
         message: "Student updated successfully",
         data: studentUpdate
     });
+});
+
+
+//@desc Student taking exam
+//@route POST /api/v1/students/exam/:examID/write
+//@access Private Student only
+exports.writeExam = AsyncHandler(async (req, res) => {
+    res.json("Student taking exam")
 });
